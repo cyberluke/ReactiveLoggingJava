@@ -41,7 +41,7 @@ public class MdcAspectController {
      * @param joinPoint to extract returntype and to proceed with execuiton
      * @return Any Publisher types depending on controller endpoint return
      */
-    @Around("within(*..*Controller)")
+    @Around("within(github.cyberluke*..*Controller)")
     @SneakyThrows()
     public Publisher<?> aroundEndpointExecution(ProceedingJoinPoint joinPoint) {
         //log.info("setting value from context into MDC for logging before controller endpoint execution");
